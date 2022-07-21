@@ -3,12 +3,12 @@ import logo from '../../assets/logo.svg';
 
 function Footer() {
   return (
-    <footer className="bg-neutral-900 text-accent-100">
+    <footer className="padding-block-700 bg-neutral-900 text-neutral-100">
       <div className="container">
-        <div className="even-colums">
+        <div className="even-columns">
           <div>
             <img src={logo} alt="logo" />
-            <ul aria-label="social links">
+            <ul aria-label="social links" role="list">
               <li>
                 <a aria-label="facebook" href="#"></a>
               </li>
@@ -28,7 +28,7 @@ function Footer() {
           </div>
           <div>
             <nav className="footer-nav">
-              <ul aria-label="footer">
+              <ul aria-label="footer" role="list">
                 <li>
                   <Link to="/">Home</Link>
                 </li>

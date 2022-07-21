@@ -2,9 +2,9 @@ import React from 'react';
 
 function Cta() {
   return (
-    <section className="cta | bg-accent-400 text-accent-100">
+    <section className="cta | padding-block-700 bg-accent-400 text-neutral-100">
       <div className="container">
-        <div className="even-colums">
+        <div className="even-columns">
           <div>
             <p className="fs-secondary-heading fw-bold">
               Simplify how your team works today.

@@ -2,7 +2,7 @@ import illustrationIntro from '../../../assets/illustration-intro.svg';
 
 function Showcase() {
   return (
-    <section>
+    <section className="padding-block-900">
       <div className="container">
         <div className="even-columns">
           <div>

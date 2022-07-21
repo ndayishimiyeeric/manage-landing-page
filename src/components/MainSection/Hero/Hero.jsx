@@ -2,9 +2,9 @@ import NumberedItem from './NumberedItem';
 
 function Hero() {
   return (
-    <section>
+    <section className="padding-block-900">
       <div className="container">
-        <div className="even-colums">
+        <div className="even-columns">
           <div>
             <h2 className="fs-secondary-heading fw-bold">
               What’s different about Manage?
@@ -16,7 +16,7 @@ function Hero() {
             </p>
           </div>
           <div>
-            <ul className="numbered-items">
+            <ul className="numbered-items" role="list">
               <NumberedItem />
             </ul>
           </div>

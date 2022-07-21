@@ -10,7 +10,7 @@ function Header() {
             <img src={logo} alt="Manage" />
           </Link>
           <nav className="primary-navigation">
-            <ul className="nav-list" aria-label="primary">
+            <ul className="nav-list" aria-label="primary" role="list">
               <li>
                 <Link to="/">Pricing</Link>
               </li>
