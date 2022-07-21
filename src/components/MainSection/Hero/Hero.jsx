@@ -1,4 +1,5 @@
 import NumberedItem from './NumberedItem';
+import data from './data';
 
 function Hero() {
   return (
@@ -17,7 +18,8 @@ function Hero() {
           </div>
           <div>
             <ul className="numbered-items" role="list">
-              <NumberedItem />
+              {data &&
+                data.map((item) => <NumberedItem key={item.id} data={item} />)}
             </ul>
           </div>
         </div>
