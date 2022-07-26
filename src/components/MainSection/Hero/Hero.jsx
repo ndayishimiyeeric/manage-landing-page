@@ -4,7 +4,7 @@ import data from './data';
 function Hero() {
   return (
     <section className="padding-block-900">
-      <div className="container">
+      <div className="wrapper">
         <div className="even-columns">
           <div>
             <h2 className="fs-secondary-heading fw-bold">

@@ -200,7 +200,7 @@ svg {
   padding-block: var(--size-700);
 }
 
-.container {
+.wrapper {
   --max-width: 1110px;
   --padding: 1rem;
 
@@ -211,6 +211,18 @@ svg {
 .even-columns {
   display: grid;
   gap: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
 @media (min-width: 50em) {
@@ -257,4 +269,99 @@ body {
 .button--white:focus-visible {
   background-color: var(--clr-neutral-100);
   color: var(--clr-accent-300);
+}
+
+/* Navigation */
+
+.primary-header {
+  padding-top: var(--size-700);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  font-size: var(--fs-nav);
+  gap: clamp(var(--size-400), 5vw, var(--size-700));
+  font-weight: var(--fw-medium);
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--clr-primary-400);
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  color: var(--clr-accent-400);
+}
+
+@media (max-width: 50em) {
+  .primary-navigation {
+    display: none;
+    position: fixed;
+    inset: 7rem var(--size-400) auto;
+    background: var(--clr-neutral-100);
+    border-radius: var(--size-100);
+    padding: var(--size-700);
+    margin-inline: auto;
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
+  }
+
+  .nav-list {
+    display: grid;
+    gap: var(--size-400);
+    text-align: center;
+    font-weight: var(--fw-bold);
+  }
+
+  .primary-navigation[data-visible] {
+    display: block;
+  }
+
+  .primary-header[data-overlay]::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(transparent, rgb(0 0 0 / 0.8));
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: fixed;
+    top: var(--size-600);
+    right: var(--size-400);
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5rem;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .mobile-nav-toggle .icon-hamburger[data-visible] {
+    display: none;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+  .display-inline-flex {
+    display: inline-flex;
+  }
 }

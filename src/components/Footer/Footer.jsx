@@ -4,7 +4,7 @@ import logo from '../../assets/logo.svg';
 function Footer() {
   return (
     <footer className="padding-block-700 bg-neutral-900 text-neutral-100">
-      <div className="container">
+      <div className="wrapper">
         <div className="even-columns">
           <div>
             <img src={logo} alt="logo" />
