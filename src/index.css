@@ -213,6 +213,13 @@ svg {
   gap: 1rem;
 }
 
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -225,11 +232,8 @@ svg {
   border: 0;
 }
 
-@media (min-width: 50em) {
-  .even-columns {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
+:where(.flow > :not(:first-child)) {
+  margin-top: var(--flow-spacer, 3em);
 }
 
 /* General styling */
@@ -238,6 +242,15 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-body);
   color: var(--clr-primary-400);
+}
+
+p:not([class]) {
+  opacity: 0.6;
+  max-width: 32ch;
+}
+
+p[data-width='full'] {
+  max-width: 42ch;
 }
 
 /* Buttons */

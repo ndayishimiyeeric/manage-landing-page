@@ -6,7 +6,7 @@ function Hero() {
     <section className="padding-block-900">
       <div className="wrapper">
         <div className="even-columns">
-          <div>
+          <div className="flow">
             <h2 className="fs-secondary-heading fw-bold">
               What’s different about Manage?
             </h2>
@@ -17,7 +17,7 @@ function Hero() {
             </p>
           </div>
           <div>
-            <ul className="numbered-items" role="list">
+            <ul className="numbered-items | flow" role="list">
               {data &&
                 data.map((item) => <NumberedItem key={item.id} data={item} />)}
             </ul>

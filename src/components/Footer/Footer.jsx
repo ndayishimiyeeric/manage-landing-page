@@ -28,7 +28,12 @@ function Footer() {
           </div>
           <div>
             <nav className="footer-nav">
-              <ul aria-label="footer" role="list">
+              <ul
+                className="flow"
+                style={{ '--flow-spacer': '1em' }}
+                aria-label="footer"
+                role="list"
+              >
                 <li>
                   <Link to="/">Home</Link>
                 </li>
