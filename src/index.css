@@ -220,6 +220,20 @@ svg {
   }
 }
 
+.vertical-align-center {
+  align-items: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+@media (min-width: 50em) {
+  .justify-self-end-md {
+    justify-self: end;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -255,6 +269,7 @@ p[data-width='full'] {
 
 /* Buttons */
 .button {
+  display: inline-flex;
   background-color: var(--clr-accent-400);
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
@@ -377,4 +392,30 @@ p[data-width='full'] {
   .display-inline-flex {
     display: inline-flex;
   }
+}
+
+/* CTA */ 
+.cta {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: 
+  url("./assets/bg-tablet-pattern.svg"),
+  url("./assets/bg-tablet-pattern.svg");
+  background-position: -15rem -5rem, 60rem -43rem;
+  background-repeat: no-repeat; 
+  opacity: 0.1;
 }
