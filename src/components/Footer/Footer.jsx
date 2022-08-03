@@ -1,32 +1,57 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
+import socialIcons from '../../assets/social-icons.svg';
+import footerLogo from '../../assets/footer-logo.svg';
 
 function Footer() {
   return (
-    <footer className="padding-block-700 bg-neutral-900 text-neutral-100">
+    <footer className="primary-footer | padding-block-700 bg-neutral-900 text-neutral-100">
       <div className="wrapper">
-        <div className="even-columns">
-          <div>
-            <img src={logo} alt="logo" />
-            <ul aria-label="social links" role="list">
+        <div className="primary-footer-wrapper">
+          <div className="primary-footer-logo-social">
+            <a href="#">
+              <svg class="logo" width="146" height="24">
+                <use xlinkHref={`${footerLogo}#logo`}></use>
+              </svg>
+            </a>
+            <ul className="social-list" aria-label="social links" role="list">
               <li>
-                <a aria-label="facebook" href="#"></a>
+                <a aria-label="facebook" href="#">
+                  <svg class="social-icon">
+                    <use xlinkHref={`${socialIcons}#icon-facebook`}></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a aria-label="youtube" href="#"></a>
+                <a aria-label="youtube" href="#">
+                  <svg class="social-icon">
+                    <use xlinkHref={`${socialIcons}#icon-youtube`}></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a aria-label="twitter" href="#"></a>
+                <a aria-label="twitter" href="#">
+                  <svg class="social-icon">
+                    <use xlinkHref={`${socialIcons}#icon-twitter`}></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a aria-label="pinterest" href="#"></a>
+                <a aria-label="pinterest" href="#">
+                  <svg class="social-icon">
+                    <use xlinkHref={`${socialIcons}#icon-pinterest`}></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a aria-label="instagram" href="#"></a>
+                <a aria-label="instagram" href="#">
+                  <svg class="social-icon">
+                    <use xlinkHref={`${socialIcons}#icon-instagram`}></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
-          <div>
+          <div className="primary-footer-nav">
             <nav className="footer-nav">
               <ul
                 className="flow"
@@ -58,10 +83,12 @@ function Footer() {
               </ul>
             </nav>
           </div>
-          <div>
+          <div className="primary-footer-form">
             <form>
               <input type="email" placeholder="Updates in your inbox…" />
-              <button className="button">Go</button>
+              <button data-shadow="none" className="button">
+                Go
+              </button>
             </form>
             <p>Copyright 2020. All Rights Reserved</p>
           </div>
