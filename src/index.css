@@ -134,6 +134,20 @@ svg {
   color: var(--clr-neutral-900);
 }
 
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 50em) {
+  .text-center-sm {
+    text-align: center;
+  }
+
+  .text-center-sm p {
+    margin-inline: auto;
+  }
+}
+
 .bg-primary-400 {
   background-color: var(--clr-primary-400);
 }
@@ -198,6 +212,10 @@ svg {
 
 .padding-block-700 {
   padding-block: var(--size-700);
+}
+
+.margin-bottom-700 {
+  margin-block-end: var(--size-700);
 }
 
 .wrapper {
@@ -529,3 +547,71 @@ input:where([type="email"], [type="text"], [type="password"]) {
   background-repeat: no-repeat; 
   opacity: 0.1;
 }
+
+/* Numbered Items */
+
+.numbered-items {
+  counter-reset: count;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.numbered-items li {
+  counter-increment: count;
+}
+
+.numbered-items div {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  column-gap: var(--size-400);
+}
+
+.numbered-items__title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  line-height: 1;
+}
+
+.numbered-items__body {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 50em) {
+  .numbered-items__body {
+    grid-column: 2 / -1;
+  }
+}
+
+.numbered-items div::before,
+.numbered-items div::after {
+  height: 40px;
+}
+
+.numbered-items div::after {
+  content: "0" counter(count);
+  display: flex;
+  align-items: center;
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-accent-400);
+  padding: 0 var(--size-500);
+  border-radius: 100vw;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+@media (max-width: 30em) {
+  .numbered-items div::before {
+    --bg: var(--clr-accent-100);
+    content: "";
+    display: block;
+    border-radius: 100vw 0 0 100vw;
+    inset: 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    box-shadow: 5em 0 0 var(--bg);
+    background-color: var(--bg);
+  }
+}
+
